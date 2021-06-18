@@ -6,8 +6,10 @@
 
 
 function validPhoneNumber(phoneNumber){
-    //TODO: Return whether phoneNumber is in the proper form
+    return phoneNumber.includes('(') && phoneNumber.includes(')') && phoneNumber.includes('-') && phoneNumber.length === 14 ? true : false
 }
 
 
 console.log(validPhoneNumber("(123) 456-7890"), true);
+console.log(validPhoneNumber("(1111)555 2345"), false) 
+console.log(validPhoneNumber("(098) 123 4567"), false)  
